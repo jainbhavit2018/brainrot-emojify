@@ -11,7 +11,7 @@ export async function POST(req) {
         apiKey: process.env.TOGETHER_API_KEY,
     });
 
-    let getDescriptionPrompt = `just modify this exact paragraph by inserting relevant emojis after every word. do not say anything else or change any word of the paragraph, just insert emojis: \n\n ${paragraph} `;
+    let getDescriptionPrompt = `just modify this exact paragraph by inserting relevant emojis after every word. do not use a single emoji too many times. do not say anything else or change any word of the paragraph, just insert emojis: \n\n ${paragraph} `;
     
     const stream = await together.chat.completions.create({
         model: "meta-llama/Llama-Vision-Free",
