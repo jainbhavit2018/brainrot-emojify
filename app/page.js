@@ -34,20 +34,20 @@ export default function Home() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <form
         className="w-full max-w-lg bg-white rounded-lg shadow-lg p-6"
         onSubmit={handleSubmit}
       >
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
-          Enter Your Paragraph
+          Brainrot 🗿 Emojify 😆 Tool 🛠️
         </h1>
         <div className="mb-4">
           <label
             htmlFor="textarea"
             className="block text-sm font-medium text-gray-700"
           >
-            Your Text
+            Brainrot Text
           </label>
           <textarea
             id="textarea"
@@ -55,14 +55,14 @@ export default function Home() {
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             className="w-full mt-1 px-4 py-2 text-gray-700 bg-gray-100 rounded-lg border border-gray-300 focus:ring-green-500 focus:border-green-500 outline-none resize-none"
-            placeholder="Type your paragraph here..."
+            placeholder="Type your transcript here... (No explicit content)"
           ></textarea>
         </div>
         <button
           type="submit"
           className="w-full px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-300"
         >
-          Submit
+          Emojify Your Brainrot 🚀
         </button>
       </form>
 
@@ -98,8 +98,10 @@ export default function Home() {
         </div>
       )}
 
-
-
+      {/* Footer */}
+      <footer className="mt-6 text-center text-gray-500 text-sm">
+        Made with ❤️ by Bhavit
+      </footer>
     </div>
   );
 }
